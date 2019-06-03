@@ -1,0 +1,357 @@
+
+连接器　版本8.7.7.181224
+Input Object File: D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\STARTUP1_L.OBJ
+Input Object File: D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\MAIN.OBJ
+Input Object File: D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ
+Input Object File: D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ
+Input Object File: D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\v3_lmrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\MAIN.OBJ)
+     00h     0001h     0004h    0004h      CODE               _main (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\MAIN.OBJ)
+     00h     0008h     0008h    0001h      CODE               @Interrupt_CMP0_SYNC_ISR_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0009h     0009h    0001h      CODE               @start (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\MAIN.OBJ)
+     00h     000ch     000ch    0001h      CODE               @Interrupt_CMP1_OV_ISR_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0010h     0010h    0001h      CODE               @Interrupt_CMP2_ZC_ISR_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0014h     0014h    0001h      CODE               @Interrupt_CMP3_VSUG_ISR_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0018h     0018h    0001h      CODE               @Interrupt_CMP4_OC_ISR_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     001ch     001ch    0001h      CODE               @Interrupt_SYNC_ISR_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     001dh     0023h    0007h      CODE               _Interrupt_PTM0_CCRA (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0024h     0027h    0004h      CODE               @Interrupt_PTM0_CCRA_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0028h     0028h    0001h      CODE               @Interrupt_TB1_ISR_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     002ch     002ch    0001h      CODE               @Interrupt_TMR_ISR_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0030h     0033h    0004h      CODE               @Interrupt_UART_ISR_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0034h     0037h    0004h      CODE               @Interrupt_CTM0_CCRA_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0038h     003bh    0004h      CODE               @Interrupt_CTM1_CCRA_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     003ch     003fh    0004h      CODE               @Interrupt_INT1_LVD_code (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0040h     0061h    0022h      CODE               _Interrupt_UART_ISR (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0062h     0068h    0007h      CODE               _Interrupt_CTM0_CCRA (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0069h     006fh    0007h      CODE               _Interrupt_CTM1_CCRA (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0070h     0075h    0006h      CODE               _Interrupt_INT1_LVD (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     0076h     0083h    000eh      CODE               _SYS_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     0084h     0097h    0014h      CODE               _IO_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     0098h     00a1h    000ah      CODE               _INTERRUPT_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     00a2h     00b7h    0016h      CODE               _RAM_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     00b8h     00beh    0007h      CODE               _ADC_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     00bfh     00cah    000ch      CODE               _CTM1_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     00cbh     00dbh    0011h      CODE               _PTM0_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     00dch     00e7h    000ch      CODE               _UART_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     00e8h     00f0h    0009h      CODE               _RESET_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     0080h     0080h    0001h      DATA     2         @data_r124 (isr:ra~rh)
+     00h     0081h     0081h    0001h      DATA     2         @data_r224 (isr:ra~rh)
+     00h     0082h     0082h    0001h      DATA     2         @data_r130 (isr:ra~rh)
+     00h     0083h     0083h    0001h      DATA     2         @data_r230 (isr:ra~rh)
+     00h     0084h     0084h    0001h      DATA     4         @data_ra30 (isr:ra~rh)
+     00h     0085h     0085h    0001h      DATA     2         @data_r134 (isr:ra~rh)
+     00h     0086h     0086h    0001h      DATA     2         @data_r234 (isr:ra~rh)
+     00h     0087h     0087h    0001h      DATA     2         @data_r138 (isr:ra~rh)
+     00h     0088h     0088h    0001h      DATA     2         @data_r238 (isr:ra~rh)
+     00h     0089h     0089h    0001h      DATA     2         @data_r13c (isr:ra~rh)
+     00h     008ah     008ah    0001h      DATA     2         @data_r23c (isr:ra~rh)
+     00h     008bh     008bh    0001h      DATA     4         @HCCINIT0_R_iicPoint (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     008ch     008ch    0001h      DATA     0         @HCCINIT0_flag3 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     008dh     008dh    0001h      DATA     0         @HCCINIT0_flag2 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     008eh     008eh    0001h      DATA     0         @HCCINIT0_flag1 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     008fh     008fh    0001h      DATA     0         @HCCINIT0_flag0 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0090h     0090h    0001h      DATA     0         @HCCINIT0_R_KeyMask1 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0091h     0091h    0001h      DATA     0         @HCCINIT0_R_KeyMask (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0092h     0092h    0001h      DATA     0         @HCCINIT0_R_KeyValue1 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0093h     0093h    0001h      DATA     0         @HCCINIT0_R_KeyValue (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0094h     0094h    0001h      DATA     0         @HCCINIT0_R_KeyDelay (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0095h     0095h    0001h      DATA     0         @HCCINIT0_R_KeyDebounce (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0096h     0096h    0001h      DATA     0         @HCCINIT0_R_CookMode (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0097h     0097h    0001h      DATA     0         @HCCINIT0_R_RealMinute (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0098h     0098h    0001h      DATA     0         @HCCINIT0_R_RealHour (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     0099h     0099h    0001h      DATA     0         @HCCINIT0_R_SetMinute (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     009ah     009ah    0001h      DATA     0         @HCCINIT0_R_SetHour (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     009bh     009bh    0001h      DATA     0         @HCCINIT0_R_SetMinute1 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     009ch     009ch    0001h      DATA     0         @HCCINIT0_R_SetHour1 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     009dh     009dh    0001h      DATA     0         @HCCINIT0_R_LEDFlash_5S0 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     009eh     009eh    0001h      DATA     0         @HCCINIT0_R_1MinCount (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     009fh     009fh    0001h      DATA     0         @HCCINIT0_R_2SecCount (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00a0h     00a0h    0001h      DATA     0         @HCCINIT0_R_1SecCount (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00a1h     00a1h    0001h      DATA     0         @HCCINIT0_R_500mSecCount (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00a2h     00a2h    0001h      DATA     0         @HCCINIT0_R_DisplayMode1 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00a3h     00a3h    0001h      DATA     0         @HCCINIT0_R_DisplayMode (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00a4h     00aah    0007h      DATA     0         @HCCINIT0_R_LEDdata (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00abh     00b3h    0009h      DATA     0         @HCCINIT0_R_IIC_DataBuffer (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00b4h     00b5h    0002h      DATA     0         @HCCINIT0_R_KeyBuffer (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00b6h     00b7h    0002h      DATA     0         @HCCINIT0_R_MachinCode (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00b8h     00bch    0005h      DATA     0         @HCCINIT0_R_ADC_arrayValue (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00bdh     00c6h    000ah      DATA     0         @HCCINIT0_R_ADC_intSumUP (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00c7h     00c7h    0001h      DATA     0         @HCCINIT0_R_ADC_Count (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00c8h     00c8h    0001h      DATA     0         @HCCINIT0_R_BeepTime (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00c9h     00c9h    0001h      DATA     0         @HCCINIT0_R_100mS_Count (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00cah     00cah    0001h      DATA     0         @HCCINIT0_R_StartPPG_Delay (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00cbh     00cbh    0001h      DATA     0         @HCCINIT0_R_maxPowerTime (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00cch     00cch    0001h      DATA     0         @HCCINIT0_R_minDelayPoff (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00cdh     00cdh    0001h      DATA     0         @HCCINIT0_R_FuncStep (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00ceh     00ceh    0001h      DATA     0         @HCCINIT0_R_FanWorkTime (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00cfh     00d0h    0002h      DATA     0         @HCCINIT0_R_intReferPower (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00d1h     00d1h    0001h      DATA     0         @HCCINIT0_R_CurrCurrent (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00d2h     00d2h    0001h      DATA     0         @HCCINIT0_R_ReferCurrent (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00d3h     00d3h    0001h      DATA     0         @HCCINIT0_R_zeroDelay_Point (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00d4h     00d4h    0001h      DATA     0         @HCCINIT0_R_tempPPG_max (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00d5h     00d5h    0001h      DATA     0         @HCCINIT0_R_tempPPG_min (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00d6h     00d6h    0001h      DATA     0         @HCCINIT0_R_currPPG_min (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00d7h     00d7h    0001h      DATA     0         @HCCINIT0_R_StartPPGTA (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00d8h     00d8h    0001h      DATA     0         @HCCINIT0_R_ErrorStatus (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00d9h     00d9h    0001h      DATA     0         @HCCINIT0_R_WorkStatus (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\VARIANTS.OBJ)
+     00h     00dah     00dah    0001h      DATA     2         @data_r330 (isr:ra~rh)
+     00h     00dbh     00dbh    0001h      DATA     2         @data_r430 (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\MAIN.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _main (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\MAIN.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _RESET_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _SYS_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _IO_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _CTM1_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _PTM0_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _ADC_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _INTERRUPT_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _UART_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _RAM_INITIAL (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INITIAL.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy36 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _Interrupt_PTM0_CCRA (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy48 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _Interrupt_UART_ISR (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy52 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _Interrupt_CTM0_CCRA (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy56 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _Interrupt_CTM1_CCRA (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy60 (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _Interrupt_INT1_LVD (D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\INTERRUPT.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     00b8h              _ADC_INITIAL
+     00bfh              _CTM1_INITIAL
+     0098h              _INTERRUPT_INITIAL
+     0084h              _IO_INITIAL
+     0008h              _Interrupt_CMP0_SYNC_ISR
+     000ch              _Interrupt_CMP1_OV_ISR
+     0010h              _Interrupt_CMP2_ZC_ISR
+     0014h              _Interrupt_CMP3_VSUG_ISR
+     0018h              _Interrupt_CMP4_OC_ISR
+     0062h              _Interrupt_CTM0_CCRA
+     0069h              _Interrupt_CTM1_CCRA
+     0070h              _Interrupt_INT1_LVD
+     001dh              _Interrupt_PTM0_CCRA
+     001ch              _Interrupt_SYNC_ISR
+     0028h              _Interrupt_TB1_ISR
+     002ch              _Interrupt_TMR_ISR
+     0040h              _Interrupt_UART_ISR
+     00cbh              _PTM0_INITIAL
+     00a2h              _RAM_INITIAL
+     00e8h              _RESET_INITIAL
+     00c9h              _R_100mS_Count
+     009eh              _R_1MinCount
+     00a0h              _R_1SecCount
+     009fh              _R_2SecCount
+     00a1h              _R_500mSecCount
+     00c7h              _R_ADC_Count
+     00b8h              _R_ADC_arrayValue
+     00bdh              _R_ADC_intSumUP
+     00c8h              _R_BeepTime
+     0096h              _R_CookMode
+     00d1h              _R_CurrCurrent
+     00a3h              _R_DisplayMode
+     00a2h              _R_DisplayMode1
+     00d8h              _R_ErrorStatus
+     00ceh              _R_FanWorkTime
+     00cdh              _R_FuncStep
+     00abh              _R_IIC_DataBuffer
+     00b4h              _R_KeyBuffer
+     0095h              _R_KeyDebounce
+     0094h              _R_KeyDelay
+     0091h              _R_KeyMask
+     0090h              _R_KeyMask1
+     0093h              _R_KeyValue
+     0092h              _R_KeyValue1
+     009dh              _R_LEDFlash_5S0
+     00a4h              _R_LEDdata
+     00b6h              _R_MachinCode
+     0098h              _R_RealHour
+     0097h              _R_RealMinute
+     00d2h              _R_ReferCurrent
+     009ah              _R_SetHour
+     009ch              _R_SetHour1
+     0099h              _R_SetMinute
+     009bh              _R_SetMinute1
+     00d7h              _R_StartPPGTA
+     00cah              _R_StartPPG_Delay
+     00d9h              _R_WorkStatus
+     00d6h              _R_currPPG_min
+     008bh              _R_iicPoint
+     00cfh              _R_intReferPower
+     00cbh              _R_maxPowerTime
+     00cch              _R_minDelayPoff
+     00d4h              _R_tempPPG_max
+     00d5h              _R_tempPPG_min
+     00d3h              _R_zeroDelay_Point
+     0076h              _SYS_INITIAL
+     00dch              _UART_INITIAL
+     008fh              _flag0
+     008eh              _flag1
+     008dh              _flag2
+     008ch              _flag3
+     0001h              _main
+     0080h              r124
+     0082h              r130
+     0085h              r134
+     0087h              r138
+     0089h              r13c
+     0081h              r224
+     0083h              r230
+     0086h              r234
+     0088h              r238
+     008ah              r23c
+     00dah              r330
+     00dbh              r430
+     0084h              ra30
+
+     Address            Public by Value
+     0001h              _main
+     0008h              _Interrupt_CMP0_SYNC_ISR
+     000ch              _Interrupt_CMP1_OV_ISR
+     0010h              _Interrupt_CMP2_ZC_ISR
+     0014h              _Interrupt_CMP3_VSUG_ISR
+     0018h              _Interrupt_CMP4_OC_ISR
+     001ch              _Interrupt_SYNC_ISR
+     001dh              _Interrupt_PTM0_CCRA
+     0028h              _Interrupt_TB1_ISR
+     002ch              _Interrupt_TMR_ISR
+     0040h              _Interrupt_UART_ISR
+     0062h              _Interrupt_CTM0_CCRA
+     0069h              _Interrupt_CTM1_CCRA
+     0070h              _Interrupt_INT1_LVD
+     0076h              _SYS_INITIAL
+     0080h              r124
+     0081h              r224
+     0082h              r130
+     0083h              r230
+     0084h              _IO_INITIAL
+     0084h              ra30
+     0085h              r134
+     0086h              r234
+     0087h              r138
+     0088h              r238
+     0089h              r13c
+     008ah              r23c
+     008bh              _R_iicPoint
+     008ch              _flag3
+     008dh              _flag2
+     008eh              _flag1
+     008fh              _flag0
+     0090h              _R_KeyMask1
+     0091h              _R_KeyMask
+     0092h              _R_KeyValue1
+     0093h              _R_KeyValue
+     0094h              _R_KeyDelay
+     0095h              _R_KeyDebounce
+     0096h              _R_CookMode
+     0097h              _R_RealMinute
+     0098h              _R_RealHour
+     0098h              _INTERRUPT_INITIAL
+     0099h              _R_SetMinute
+     009ah              _R_SetHour
+     009bh              _R_SetMinute1
+     009ch              _R_SetHour1
+     009dh              _R_LEDFlash_5S0
+     009eh              _R_1MinCount
+     009fh              _R_2SecCount
+     00a0h              _R_1SecCount
+     00a1h              _R_500mSecCount
+     00a2h              _R_DisplayMode1
+     00a2h              _RAM_INITIAL
+     00a3h              _R_DisplayMode
+     00a4h              _R_LEDdata
+     00abh              _R_IIC_DataBuffer
+     00b4h              _R_KeyBuffer
+     00b6h              _R_MachinCode
+     00b8h              _ADC_INITIAL
+     00b8h              _R_ADC_arrayValue
+     00bdh              _R_ADC_intSumUP
+     00bfh              _CTM1_INITIAL
+     00c7h              _R_ADC_Count
+     00c8h              _R_BeepTime
+     00c9h              _R_100mS_Count
+     00cah              _R_StartPPG_Delay
+     00cbh              _R_maxPowerTime
+     00cbh              _PTM0_INITIAL
+     00cch              _R_minDelayPoff
+     00cdh              _R_FuncStep
+     00ceh              _R_FanWorkTime
+     00cfh              _R_intReferPower
+     00d1h              _R_CurrCurrent
+     00d2h              _R_ReferCurrent
+     00d3h              _R_zeroDelay_Point
+     00d4h              _R_tempPPG_max
+     00d5h              _R_tempPPG_min
+     00d6h              _R_currPPG_min
+     00d7h              _R_StartPPGTA
+     00d8h              _R_ErrorStatus
+     00d9h              _R_WorkStatus
+     00dah              r330
+     00dbh              r430
+     00dch              _UART_INITIAL
+     00e8h              _RESET_INITIAL
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     1000h     00dah    5%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     005ch    71%
+     01h       0080h     0000h    0%
+     Total     0100h     005ch    35%
+
+Use Stack Count
+_main: 2
+_Interrupt_PTM0_CCRA: 0
+_Interrupt_UART_ISR: 0
+_Interrupt_CTM0_CCRA: 0
+_Interrupt_CTM1_CCRA: 0
+_Interrupt_INT1_LVD: 0
+_OPA_CMPx_INITIAL: 2
+
+Call Tree
+    @dummy
+        _main (0)
+            _RESET_INITIAL (1)
+                _SYS_INITIAL (2)
+                _IO_INITIAL (2)
+                _CTM1_INITIAL (2)
+                _PTM0_INITIAL (2)
+                _ADC_INITIAL (2)
+                _INTERRUPT_INITIAL (2)
+                _UART_INITIAL (2)
+                _RAM_INITIAL (2)
+    @dummy36
+        _Interrupt_PTM0_CCRA (0)
+    @dummy48
+        _Interrupt_UART_ISR (0)
+    @dummy52
+        _Interrupt_CTM0_CCRA (0)
+    @dummy56
+        _Interrupt_CTM1_CCRA (0)
+    @dummy60
+        _Interrupt_INT1_LVD (0)
+    _OPA_CMPx_INITIAL
+        _Sub_CMPx_Calibration (0)
+            __DELAYX (1)
+            _Crom2Prom (1)
+        _Sub_CMPx_Initialation (0)
+
+HLINK : 程序的开始执行点在程序段'@code'（地址0）。定义在'D:\NewWaves\Projects\Induction cooker\NW201x\Program\NW2018_16NSOP DEMOCODE\Output\MAIN.OBJ' 文件中
+
+错误总数 : 0  警告总数 : 0
