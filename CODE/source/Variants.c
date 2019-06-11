@@ -67,5 +67,6 @@ u8 R_UartData_Buf[2][DATA_LEN];//串口接受数据暂存.
 volatile u8 R_Uart_active;//控制二维数组排,防止数据未使用而被后面接受的数据覆盖掉.
 volatile u8 R_UartData_Idx;//串口接收数据的数组位.
 
+const u8 Uart_SendDataBuf2[5] = {0x7E, 0x03, 0xC5,0x00, 0x01};
 
 //------end of file---------------------------------------------------------------------

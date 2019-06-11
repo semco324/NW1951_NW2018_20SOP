@@ -31,8 +31,19 @@ extern void get_calibration_factor(void);
 /*in key.c*/
 extern void key_scan(void);
 
+//Debug
+#if _UART_ENABLE
 /*in uart.c*/
 extern void UART_SendData(u8 *pdata, u8 len);
+
+#define DEBUG_EN		0
+#if DEBUG_EN
+#define LEN_TEST		9
+u8 Uart_DataBuf[LEN_TEST];
+#endif
+#endif
+
+/* eeprom.c */
 extern void User_config_Read(void);
 
 #endif 			//_MAIN_H

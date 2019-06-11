@@ -283,6 +283,7 @@ void Interrupt_CTM0_CCRA(void)
 				R_intchargetime = 0;
 				P_NOCHG = 1;//定时时间到,关闭充电.
 				f_timeout = 1;
+				f_chargetime = 0;
 			}
 		}
 	}else{

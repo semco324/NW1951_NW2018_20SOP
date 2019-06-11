@@ -23,13 +23,15 @@
 //
 //	Revision History:
 //			1.Initial on 2019.05.08
-
+//TEST:
+//1.充满电池电压:13.3v
+//2.有适配器充电打开满电电池电压:13.51
+//3.有适配器充电关闭满电电池电压:13.51
+//
+//
 #include "main.h"
-#define DEBUG_EN		0
-#if DEBUG_EN
-#define LEN_TEST		9
-u8 Uart_DataBuf[LEN_TEST];
-#endif
+
+
 
 int main(void)
 {
@@ -53,22 +55,21 @@ int main(void)
 		GCC_CLRWDT();
 		
 #if DEBUG_EN//test
-		//UART调试用
-		if(f_200ms){ 
-			f_200ms = 0;
-			Uart_DataBuf[0] = (R_intADC_Vbat/1000);
-			Uart_DataBuf[1] = (R_intADC_Vbat/100%10);
-			Uart_DataBuf[2] = (R_intADC_Vbat%100/10);
-			Uart_DataBuf[3] = (R_intADC_Vbat%10);
-			Uart_DataBuf[4] = (R_intADC_Vbat/1000);
-			Uart_DataBuf[5] = (R_intADC_Vbat/100%10);
-			Uart_DataBuf[6] = (R_intADC_Vbat%100/10);
-			Uart_DataBuf[7] = (R_intADC_Vbat%10);
-			Uart_DataBuf[8] = R_calibration_k;
-			UART_SendData((u8 *)(&Uart_DataBuf[0]),LEN_TEST);
-		}
+				//UART调试用
+				if(f_200ms){ 
+					f_200ms = 0;
+					Uart_DataBuf[0] = (R_intADC_Vbat/1000);
+					Uart_DataBuf[1] = (R_intADC_Vbat/100%10);
+					Uart_DataBuf[2] = (R_intADC_Vbat%100/10);
+					Uart_DataBuf[3] = (R_intADC_Vbat%10);
+					Uart_DataBuf[4] = (R_intADC_mot_i/1000);
+					Uart_DataBuf[5] = (R_intADC_mot_i/100%10);
+					Uart_DataBuf[6] = (R_intADC_mot_i%100/10);
+					Uart_DataBuf[7] = (R_intADC_mot_i%10);
+					Uart_DataBuf[8] = R_calibration_k;
+					UART_SendData((u8 *)(&Uart_DataBuf[0]),LEN_TEST);
+				}
 #endif
-
 		if (f_2ms){
 			f_2ms = 0;
 			

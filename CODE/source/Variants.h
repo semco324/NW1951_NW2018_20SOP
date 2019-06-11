@@ -45,7 +45,7 @@ extern volatile __flag_type flag2;
 #define f_keypress					flag2.bits.b4
 #define f_vin_on					flag2.bits.b5	//0:按键方式开机;   		1:AC方式开机,Vbat>12.5V则清0.
 #define f_positive					flag2.bits.b6	//1:positive 
-//#define  				flag2.bits.b7	
+#define f_mot_i 				flag2.bits.b7	
 
 extern volatile __flag_type flag3;
 #define f_flag3_byte				flag3.byte

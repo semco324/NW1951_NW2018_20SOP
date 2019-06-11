@@ -626,7 +626,8 @@ void SYS_INITIAL()
 	_vlvd1=0;               				 // 101: 3.3V  ;  110: 3.6V  ;  111: 4.0V
 	_vlvd0=0;
 	*/
-	_scc = 0x00;						// FSYS = FH
+//	_scc = 0x00;						// FSYS = FH
+	_scc = 0b00100000;						// FSYS = FH/2=8m
 	_hircc = 0x01;					// HIRC 控制器使能
 	
 	while(!_hircf)					// 检测HIRC振荡器是否稳定--- 0: 未稳定,  1: 稳定
@@ -699,7 +700,7 @@ void IO_INITIAL()
 	_pbs01=0;					// PBS0[1:0]---PB0功能定义; 00&01&10: PB0 ; 11: TX
 	_pbs00=1;
 	*/
-	_pbs0 = 0b00001111;				//PB1:RX;	PB0:TX   PBS0[7:4]---未定义
+	_pbs0 = 0b00000000;				//PB1:RX;	PB0:TX   PBS0[7:4]---未定义
 	_pbpu = 0b00001100;
 	_pbc  = 0b00001100;				// 0：输出 1：输入         PBC[7:4]---未定义
 	_pb   = 0b00000000;

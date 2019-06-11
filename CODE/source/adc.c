@@ -69,7 +69,7 @@ void GetBattery_Level (void)
 				_sadc1 = C_INTERNAL_OPA;
 				
 				R_ADC_Count++;
-				if(R_ADC_Count >= 8){//C_CHANGE_CNT
+				if(R_ADC_Count >= 8){
 					R_ADC_Count = 0;
 					f_adc_ok = 1;
 				

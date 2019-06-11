@@ -90,6 +90,7 @@ void bbu_charge(void)
 		P_NOCHG = 0;//打开充电	
 		f_cont1 = 0;
 		f_cont2 = 0;
+		f_mot_i = 0;
 		/*LED*/
 		f_charging = 0;
 		f_bat_full = 0;
@@ -98,7 +99,7 @@ void bbu_charge(void)
 		R_lowI2off_cnt = 0;
 		R_intlowv2off_cnt = 0;
 		R_change_cnt = 0;		
-		R_intsettime = C_TIME12H;
+		R_intsettime = C_TIME9H;
 		R_inttime1min = 0;
 		f_chargetime = 1;
 		f_timeout = 0;
@@ -159,24 +160,29 @@ void bbu_charge(void)
 		GetBattery_Level();
 		if(f_adc_ok){
 			f_adc_ok = 0;
-			if(P_NOCHG){
-				/* 充电模式,当Vbat>12V5,打开输出. */
-				if(C_BATV_12V5 <= R_intADC_Vbat){
-					R_change_cnt++;
-					if(C_CHANGE_CNT <= R_change_cnt){
-						f_vin_on = 0;
-						R_change_cnt = 0;
-						P_LOAD = 1;
-						P_OPEN = 1;
-					}
-				}else{
-					R_change_cnt = 0;
+			
+			if(R_intADC_mot_i >= C_MOT_I_200){
+				
+				R_change_cnt = 0;
+				R_batchg_cnt = 0;
+			
+				R_lowI2off_cnt++;
+				if(R_lowI2off_cnt > 10){
+					R_lowI2off_cnt = 0;
+					if(!P_NOCHG)f_mot_i = 1;
+					P_NOCHG = 1;//关闭充电,防止马达电压不稳定时会损坏充电模块.
+//					f_chargetime = 0;
 				}
+				
 			}else{
+				R_lowI2off_cnt = 0;
+				if(f_mot_i)P_NOCHG = 0;
+				f_mot_i = 0;
+#if 0
 				/* 充电模式,当Vbat>12V5,打开输出. */
-				if(C_BATV_12V9 <= R_intADC_Vbat){
+				if(C_BATV_12V6 <= R_intADC_Vbat){
 					R_change_cnt++;
-					if(C_CHANGE_CNT <= R_change_cnt){
+					if(250 <= R_change_cnt){
 						f_vin_on = 0;
 						R_change_cnt = 0;
 						P_LOAD = 1;
@@ -185,31 +191,76 @@ void bbu_charge(void)
 				}else{
 					R_change_cnt = 0;
 				}
-			}
+				
+				if(C_BATV_12V3 > R_intADC_Vbat){
+					R_batchg_cnt++;
+					if(250 <= R_batchg_cnt){
+						R_batchg_cnt = 0;
+						P_LOAD = 0;
+						P_OPEN = 0;
+						P_NOCHG = 0;//打开充电	
+						f_chargetime = 1;
+					}
+				}else
+					R_batchg_cnt = 0;
+					
+#else
+				if(P_NOCHG){
+					/* 充电模式,当Vbat>12V5,打开输出. */
+					if(C_BATV_12V5 <= R_intADC_Vbat){
+						R_change_cnt++;
+						if(C_CHANGE_CNT <= R_change_cnt){
+							f_vin_on = 0;
+							R_change_cnt = 0;
+							P_LOAD = 1;
+							P_OPEN = 1;
+						}
+					}else{
+						R_change_cnt = 0;
+					}
+				}else{
+					/* 充电模式,当Vbat>12V5,打开输出. */
+					if(C_BATV_12V9 <= R_intADC_Vbat){
+						R_change_cnt++;
+						if(C_CHANGE_CNT <= R_change_cnt){
+							f_vin_on = 0;
+							R_change_cnt = 0;
+							P_LOAD = 1;
+							P_OPEN = 1;
+						}
+					}else{
+						R_change_cnt = 0;
+					}
+				}
 
-			if(P_LOAD){
-				if(C_BATV_12V >= R_intADC_Vbat){
-					R_batchg_cnt++;
-					if(C_CHANGE_CNT <= R_batchg_cnt){
+				if(P_LOAD){
+					if(C_BATV_12V >= R_intADC_Vbat){
+						R_batchg_cnt++;
+						if(C_CHANGE_CNT <= R_batchg_cnt){
+							R_batchg_cnt = 0;
+							P_LOAD = 0;
+							P_OPEN = 0;
+							P_NOCHG = 0;//打开充电	
+							f_chargetime = 1;
+						}
+					}else
 						R_batchg_cnt = 0;
-						P_LOAD = 0;
-						P_OPEN = 0;
-						P_NOCHG = 0;//打开充电	
-					}
-				}else
-					R_batchg_cnt = 0;
-			}else{
-				if(C_BATV_12V4 > R_intADC_Vbat){
-					R_batchg_cnt++;
-					if(C_CHANGE_CNT <= R_batchg_cnt){
+				}else{
+					if(C_BATV_12V4 > R_intADC_Vbat){
+						R_batchg_cnt++;
+						if(C_CHANGE_CNT <= R_batchg_cnt){
+							R_batchg_cnt = 0;
+							P_LOAD = 0;
+							P_OPEN = 0;
+							P_NOCHG = 0;//打开充电	
+							f_chargetime = 1;
+						}
+					}else
 						R_batchg_cnt = 0;
-						P_LOAD = 0;
-						P_OPEN = 0;
-						P_NOCHG = 0;//打开充电	
-					}
-				}else
-					R_batchg_cnt = 0;
+				}
+#endif
 			}
+			
 
 			/* 充电模式,当Vbat>15V,关闭充电. */
 			if(C_BATV_15V <= R_intADC_Vbat){
@@ -217,47 +268,47 @@ void bbu_charge(void)
 				if(C_CHANGE_CNT <= R_intlowv2off_cnt){
 					R_intlowv2off_cnt = 0;
 					P_NOCHG = 1;//关闭充电	
+					f_chargetime = 0;
 				}
 			}else{
 				R_intlowv2off_cnt = 0;
 			}
 
-			if(f_charging){
+//			if(f_charging){
 				/* 根据电池电量设定充电时间,防止过充. */
 			
 				R_batlvl_cnt++;
-				if(C_BATV_13V6 <= R_intADC_Vbat){
+				if(C_BATV_13V5 <= R_intADC_Vbat){
 					R_batlvl_cnt1++;
-				}else if(C_BATV_13V <= R_intADC_Vbat){
+				}/*else if(C_BATV_13V <= R_intADC_Vbat){
 					R_batlvl_cnt2++;
-				}else if(C_BATV_11V5 > R_intADC_Vbat){
+				}*/else if(C_BATV_11V5 > R_intADC_Vbat){
 					R_batlvl_cnt3++;
 				}
 				if(C_BATLVL_CNT <= R_batlvl_cnt){
 					R_batlvl_cnt = 0;
-					if(R_batlvl_cnt3 <= R_batlvl_cnt3){
-						R_intsettime = C_TIME12H;
+					if(R_batlvl_cnt1 <= R_batlvl_cnt3){
+						R_intsettime = C_TIME9H;
 					}
-					if(R_batlvl_cnt3 <= R_batlvl_cnt2){
-						R_intsettime = C_TIME4H;
-						R_batlvl_cnt3 = R_batlvl_cnt2;
-					}
-					if(R_batlvl_cnt3 <= R_batlvl_cnt1){
+//					if(R_batlvl_cnt3 <= R_batlvl_cnt2){
+//						R_intsettime = C_TIME4H;
+//						R_batlvl_cnt3 = R_batlvl_cnt2;
+//					}
+					if(R_batlvl_cnt3 < R_batlvl_cnt1){
+						if(C_TIME2H != R_intsettime){
+							R_intchargetime = 0;
+						}
 						R_intsettime = C_TIME2H;
-						R_batlvl_cnt3 = R_batlvl_cnt1;
 					}
 					R_batlvl_cnt1 = 0;
 					R_batlvl_cnt2 = 0;
 					R_batlvl_cnt3 = 0;
 				}
-			}
-
-
+//			}
 			
 			/* 充电定时时间到关闭充电后,当电池电压再次低于12.4V,此时再重新打开充电*/
 			if(f_timeout){
-				P_NOCHG = 1;//定时时间到,关闭充电.
-				if(C_BATV_12V4 > R_intADC_Vbat){
+				if(C_BATV_12V4 >= R_intADC_Vbat){
 					f_timeout = 0;
 					f_charge_init = 1;
 				}
@@ -284,7 +335,7 @@ void bbu_discharge(void)
 		_pcs01 = 1;
 		_pcs00 = 1;
 		
-//		P_NOCHG = 0;//打开充电,省电.	
+		P_NOCHG = 0;//打开充电,省电.	
 		
 		f_lowV = 0;
 		f_lowI = 0;
@@ -439,7 +490,6 @@ void bbu_safety(void)
 		
 		f_chargetime = 0;
 	}else{
-
 		
 		GetBattery_Level();
 		if(f_adc_ok){

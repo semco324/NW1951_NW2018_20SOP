@@ -69,7 +69,7 @@ typedef union
 #define C_20S_COUNT				100		//200MS*100=20S
 #define C_1MIN_COUNT			30000	//2mS*30000=60S
 
-#define C_TIME12H				720		//60S*720=12h
+#define C_TIME9H				540		//60S*540=9h
 #define C_TIME4H				240		//60S*240=4h
 #define C_TIME2H				120		//60S*120=2h
 
@@ -82,7 +82,7 @@ typedef union
 #define C_LOWV2OFF_CNT			1875//1875*0.032S = 60s
 #define C_LOWI2OFF_CNT			70
 #define C_HIGI2SAF_CNT			70
-#define C_CHANGE_CNT			100
+#define C_CHANGE_CNT			100//250//100
 
 #define C_BATLVL_CNT			100
 
@@ -106,13 +106,17 @@ typedef union
 #define C_BATV_11V				2748
 #define C_BATV_11V5				2873
 #define C_BATV_12V				2998
+#define C_BATV_12V3				3073
 #define C_BATV_12V4				3098
 #define C_BATV_12V5				3123
+#define C_BATV_12V6				3148
+//#define C_BATV_12V8				3198
 #define C_BATV_12V9				3223
 #define C_BATV_13V				3248
 #define C_BATV_13V2				3298
-#define C_BATV_13V6				3398
+#define C_BATV_13V5				3373
 #define C_BATV_15V				3748
+#define C_BATV_15V5				3872
 
 /*
 0.3:122-159
@@ -132,6 +136,7 @@ typedef union
 /* 电流检测     */						//0.025ohm 1A-->432
 #define C_MOT_I_LOW				389//0.95A
 #define C_MOT_I_HIGHT			409//1A=0.025ohm *1A *20倍=0.5v--->AD=0.5v/5v*4095=409.5
+#define C_MOT_I_200				200//充电时又有1A负载放电.负载有放电电流1A，有电池又有充电时，电池会放电而不是充电.
 
 #define C_CHARGE_I				1
 
