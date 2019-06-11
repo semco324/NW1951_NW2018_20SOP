@@ -1,0 +1,17 @@
+#忽略git管理文件
+*.opt
+*.pjt
+*.pjtx
+*.pjw
+*.ASM
+*.LST
+*.OBJ
+*.MTP
+*.bin
+*.CV
+*.DBG
+*.list
+*.MAP
+*.MEM
+*.MTP
+*.TSK
