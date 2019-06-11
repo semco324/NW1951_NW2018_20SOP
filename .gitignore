@@ -14,4 +14,4 @@
 *.MAP
 *.MEM
 *.MTP
-#*.TSK
+*.TSK
